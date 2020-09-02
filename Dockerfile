@@ -12,7 +12,7 @@ RUN apk add --no-cache --virtual .ext-deps \
         inkscape
 
 # imagick
-RUN apk add --update --no-cache autoconf gcc g++ imagemagick-dev libtool make pcre-dev \
+RUN apk add --update --no-cache autoconf gcc g++ imagemagick-dev libtool make automake pcre-dev \
     && pecl install imagick \
     && docker-php-ext-enable imagick
 
